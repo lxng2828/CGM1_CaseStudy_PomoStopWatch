@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section id="main">
+            <div id="settings">
+                <label for="pomodoro-ds">pomodoro</label>
+                <label for="shortbreak-ds">shortbreak</label>
+                <label for="longbreak-ds">longbreak</label>
+                <input type="number" id="pomodoro-ds" value="25">
+                <input type="number" id="shortbreak-ds" value="5">
+                <input type="number" id="longbreak-ds" value="15">
+                <button id="settings-btn">apply</button>
+            </div>
+            <nav id="menu">
+                <button id="pomodoro-btn">Pomodoro</button>
+                <button id="shortbreak-btn">Short Break</button>
+                <button id="longbreak-btn">Long Break</button>
+                <button id="stopwatch-btn">Stopwatch</button>
+            </nav>
+
+            <div id="pomodoro" class="timer">
+                <input type="text" id="pomodoro-duration" class="duration" value="25:00" disabled>
+                <button id="pomodoro-start-btn" class="start-btn">START</button>
+                <button id="pomodoro-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="pomodoro-reset-btn" class="reset-btn">RESET</button>
+            </div>
+
+            <div id="shortbreak" class="timer" style="display: none;">
+                <input type="text" id="shortbreak-duration" class="duration" value="05:00" disabled>
+                <button id="shortbreak-start-btn" class="start-btn">START</button>
+                <button id="shortbreak-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="shortbreak-reset-btn" class="reset-btn">RESET</button>
+            </div>
+
+            <div id="longbreak" class="timer" style="display: none;">
+                <input type="text" id="longbreak-duration" class="duration" value="15:00" disabled>
+                <button id="longbreak-start-btn" class="start-btn">START</button>
+                <button id="longbreak-pause-btn" class="pause-btn">PAUSE</button>
+                <button id="longbreak-reset-btn" class="reset-btn">RESET</button>
+            </div>
+
+            <div id="stopwatch" class="timer" style="display: none;">
+                <div id="display"></div>
+                <div id="laps"></div>
+                <div id="stopwatch-btn-c">
+                    <button id="startBtn">Start</button>
+                    <button id="pauseBtn">Pause</button>
+                    <button id="resetBtn">Reset</button>
+                    <button id="lapBtn">Lap</button>
+                </div>
+            </div>
+
+            <div id="count">
+                <h5>Pomodoro counter : <span id="pomodoro-c">0</span></h5>
+                <h5>Shortbreak counter : <span id="shortbreak-c">0</span></h5>
+                <h5>Longbreak counter : <span id="longbreak-c">0</span></h5>
+
+
+            </div>
+        </section>
+
+        <script type="module" src="./js/main.js"></script>
+    </main>
+</body>
+
+</html>
